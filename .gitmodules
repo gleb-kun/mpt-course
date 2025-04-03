@@ -6,3 +6,7 @@
 	path = latex/templates/beamer/SPbU-BeamerSlides
 	url = https://github.com/gleb-kun/SPbU-BeamerSlides.git
 	branch = master
+[submodule "latex/templates/beamer/SaintPetersburg"]
+	path = latex/templates/beamer/SaintPetersburg
+	url = https://github.com/igankevich/SaintPetersburg.git
+	branch = master
