@@ -1,0 +1,4 @@
+[submodule "common/solutions"]
+	path = common/solutions
+	url = https://github.com/gleb-kun/mpt-course-solutions.git
+	branch = master
