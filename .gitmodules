@@ -10,3 +10,7 @@
 	path = latex/templates/beamer/SaintPetersburg
 	url = https://github.com/igankevich/SaintPetersburg.git
 	branch = master
+[submodule "latex/templates/documents/Russian-Phd-LaTeX-Dissertation-Template"]
+	path = latex/templates/documents/Russian-Phd-LaTeX-Dissertation-Template
+	url = https://github.com/AndreyAkinshin/Russian-Phd-LaTeX-Dissertation-Template.git
+	branch = master
