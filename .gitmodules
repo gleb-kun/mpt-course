@@ -2,3 +2,7 @@
 	path = common/solutions
 	url = https://github.com/gleb-kun/mpt-course-solutions.git
 	branch = master
+[submodule "latex/templates/beamer/SPbU-BeamerSlides"]
+	path = latex/templates/beamer/SPbU-BeamerSlides
+	url = https://github.com/gleb-kun/SPbU-BeamerSlides.git
+	branch = master
