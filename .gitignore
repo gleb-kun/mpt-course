@@ -1,2 +1,16 @@
+# Common
 .idea
+
+
+# Python
 .ipynb_checkpoints
+
+
+# LaTeX
+**.aux
+**.log
+**.out
+**.synctex.gz
+
+latex/**/*.pdf
+!latex/literature/**/*.pdf
