@@ -1,0 +1,186 @@
+\documentclass[specialist,
+substylefile = spbu.rtx,
+               subf,href,colorlinks=true, 12pt]{disser}
+
+%
+% Основные пакеты
+%
+
+\usepackage[a4paper,
+            mag=1000, includefoot,
+            left=3cm, right=1.5cm, top=2cm, bottom=2cm, headsep=1cm, footskip=1cm]{geometry}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+
+%
+% Пользовательские пакеты
+%
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+%
+% Прочие настройки
+%
+
+\setcounter{tocdepth}{2} 	% Включать подсекции в оглавление
+
+\pagestyle{plain}        	% Номера страниц снизу по центру с этой страницы
+
+							% Возможности команды \pagestyle:
+							% - 'plain' — отображает номер страницы снизу по центру (это по умолчанию для обычных страниц).
+							% - 'headings' — номер страницы в верхнем углу, рядом с заголовками секций.
+							% - 'myheadings' — пользовательские заголовки вверху (можно задавать вручную).
+							% - 'empty' — отсутствие номера страницы и заголовков (не отображаются ни номера, ни заголовки).
+
+\graphicspath{{fig/}}
+
+\begin{document}
+
+%
+% Титульный лист на русском языке
+%
+
+% Название организации
+\institution{
+	Санкт-Петербургский государственный университет\\
+}
+
+% Факультет
+\faculty{
+	Математико-механический факультет
+}
+
+% Кафедра
+\department{
+	Кафедра вычислительной математики
+}
+
+% Работа
+\title{
+	Выпускная квалификационная работа
+}
+
+% Тема
+\topic{
+	Анализ воздействия резиновых уточек на изменение динамики жидкостных потоков в ванне
+}
+
+% Автор
+\author{
+	Фамилия
+	Имя
+	Отчество
+}
+
+% Информация об авторе, учебная программ и т. п.
+\group{
+	Уровень образования: бакалавриат\\
+	Направление 01.03.02 <<Прикладная математика и информатика>>\\
+	Основная образовательная программа СВ.5004.2018 <<Прикладная математика и информатика>>
+}
+
+% Научный руководитель
+\sa       {И.\,И.~Иванов}
+\sastatus {Профессор кафедры такой-то,\\
+	д.\,ф.-м.\,н., профессор}
+
+% Рецензент
+\rev      {П.\,П.~Петров}
+\revstatus{Наиглавнейший научный сотрудник, ООО~<<Рога и Копыта>>\\
+	к.\,ф.-м.\,н., доцент}
+
+% Город и год
+\city{Санкт-Петербург}
+\date{\number\year}
+
+\maketitle
+
+%
+% Титульный лист на русском языке на Английском языке
+%
+
+% Название организации
+\institution{
+	Saint Petersburg State University
+}
+
+% Факультет
+\faculty{
+	Faculty of Mathematics and Mechanics
+}
+
+% Факультет
+\department{
+	Department of Computational Mathematics
+}
+
+%  Работа
+\title{
+	Graduation Project
+}
+
+% Тема работы
+\topic{Dummy Diploma on Random Matter}
+
+% Автор
+\author{Pupkin Vasiliy Vasilyevich}
+
+% Информация об авторе, учебная программ и т. п.
+\group{
+	Level of education: Bachelor's degree\\
+	Specialization 01.03.02 <<Applied Mathematics and Computer Science>>\\
+	Graduate program СВ.5004.2018 <<Applied Mathematics and Computer Science>>
+}
+
+%% Scientific Advisor
+\sa       {I.\,I.~Ivanov}
+\sastatus {Professor, Some department}
+%
+%% Reviewer
+\rev      {P.\,P.~Petrov}
+\revstatus{The most leading research associate, LLC~``Horns and Hoofs''}
+%
+%% City & Year
+\city{Saint Petersburg}
+\date{\number\year}
+
+\maketitle[en]
+
+\def\thispagestyle#1{}
+\tableofcontents
+
+\chapter*{Введение}\addcontentsline{toc}{chapter}{Введение}
+
+\chapter{Название первой главы}
+
+\section{Секция 1}
+
+Содержимое секции...
+
+\section{Секция 2}
+
+Содержимое секции...
+
+\chapter{Название второй главы}
+
+\section{Секция 1}
+
+Содержимое секции...
+
+\section{Секция 2}
+
+Содержимое секции...
+
+\chapter*{Заключение}\addcontentsline{toc}{chapter}{Заключение}
+
+\renewcommand{\bibname}{Список литературы}
+\begin{thebibliography}{1}
+	
+	\bibitem{Lvovsky}
+	Львовский С. М. Набор и верстка в системе LaTeX. М.: МЦНМО, 2021. 398 с.
+	
+\end{thebibliography}
+
+\end{document}
