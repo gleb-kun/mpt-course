@@ -12,6 +12,9 @@
 **.out
 **.synctex.gz
 **.toc
+**.nav
+**.vrb
+**.snm
 
 latex/**/*.pdf
 !latex/literature/**/*.pdf
