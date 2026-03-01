@@ -1,0 +1,150 @@
+\documentclass[10pt,aspectratio=169]{beamer}
+
+\usepackage{spbu}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{ulem}
+
+\title{\LaTeX}
+\subtitle{Набор математических формул}
+
+
+\begin{document}
+
+    \maketitle
+    
+    \begin{frame}[fragile]{Добавление формул}
+    	Формулы можно разделить на два вида.
+    	\begin{itemize}
+    		\item Строчные формулы добавляются с использованием символа доллар (\verb|$|), например\\
+    		\verb|$\Delta =\nabla^{2}$|: $\Delta =\nabla^{2}$.
+    		\item Вынесенные формулы добавляются, например, с помощью двух символов доллара (\verb|$$формула$$|), либо с использованием конструкции \verb|\[формула\]|, либо с использованием окружения
+    		\verb|equation| или \verb|displaymath|, существуют и другие способы.
+    	\end{itemize}
+    	
+    	\begin{itemize}
+    		\item Внутритекстовые и вынесенные формулы --- часть предложения.
+    	\end{itemize}
+    \end{frame}
+    
+    \begin{frame}[fragile]{Добавление формул}
+    	\framesubtitle{Пример вынесенной формулы}
+    	
+    	\begin{block}{Добавление вынесенной формулы}
+\begin{lstlisting}
+\begin{equation}
+	\frac{\partial u}{\partial t}
+	-a^2\left(\frac{\partial^2 u}{\partial x^2_1}
+	+\frac{\partial^2 u}{\partial x^2_2}
+	+\ldots+\frac{\partial^2 u}{\partial x^2_n}\right)=f\left(x,t\right).
+	\label{eq:eq1}
+\end{equation}
+\end{lstlisting}
+    	\end{block}
+    	
+    	Результат:
+    	\begin{equation}
+    		\frac{\partial u}{\partial t}
+    		-a^2\left(\frac{\partial^2 u}{\partial x^2_1}
+    		+\frac{\partial^2 u}{\partial x^2_2}
+    		+\ldots+\frac{\partial^2 u}{\partial x^2_n}\right)=f\left(x,t\right).
+    		\label{eq:eq1}
+    	\end{equation}
+    	Ссылка на формулу (\ref{eq:eq1}).
+    \end{frame}
+    
+    \begin{frame}[fragile]{Добавление формул}
+    	\framesubtitle{Нумерация, пакет autonum}
+    	По умолчанию формулы заданные через окружение \verb|equation| --- нумеруются, через окружение \verb|displaymath| --- нет.
+    	
+    	Для организации нумерации, только тех формул, на которые есть ссылка, можно использовать пакет  \verb|autonum|. Его достаточно только подключить.
+    	
+    	\begin{columns}
+    		\begin{column}{0.5\textwidth}
+\begin{lstlisting}
+\begin{equation}
+	a+b=2
+	\label{eq:example1}
+\end{equation}
+Ссылка на формулу (2).
+\end{lstlisting}
+    		\end{column}
+    		\begin{column}{0.5\textwidth}
+\begin{lstlisting}
+\begin{equation}
+	a-b=0
+	\label{eq:example2}
+\end{equation}
+Ссылка на формулу (\ref{eq:example2}).
+\end{lstlisting}
+    		\end{column}
+    		% Может быть и больше!
+    	\end{columns}
+    \end{frame}
+    
+    \begin{frame}[fragile]{Пакеты}
+       	\framesubtitle{amsmath, amsthm, amssymb, amsfonts}
+       	
+       	\begin{itemize}
+    		\item Пакеты \verb|amsmath|, \verb|amsthm|, \verb|amssymb|, \verb|amsfonts|, разработаны AMS (American Mathematical Society).
+    		\item Существенно упрощают набор формул.
+    		\item Далее предполагаем, что эти пакеты подключены.
+    	\end{itemize}
+    \end{frame}
+    
+    \begin{frame}[fragile]{Арифметические операторы}
+    	\begin{columns}
+    		\begin{column}{0.5\textwidth}
+		    	\begin{itemize}
+    				\item \verb|$a+b$|: $a+b$
+    				\item \verb|$a-b$|: $a-b$
+    				\item \verb|$a \times b$|: $a \times b$
+    				\item \verb|$a \cdot b$|: $a \cdot b$
+    			\end{itemize}
+    		\end{column}
+    		\begin{column}{0.5\textwidth}
+		    	\begin{itemize}
+    				\item \verb|$a / b$|: $a / b$
+		    		\item \verb|$a \div b$|: $a \div b$
+    				\item \verb|$\frac{a+1}{b-5}$|: $\frac{a+1}{b-5}$
+    				\item \verb|$\dfrac{a+1}{b-5}$|: $\dfrac{a+1}{b-5}$
+    				\item \verb|$\tfrac{a+1}{b-5}$|: $\tfrac{a+1}{b-5}$
+    			\end{itemize}
+    		\end{column}
+    	\end{columns}
+    \end{frame}
+    
+    \begin{frame}[fragile]{Индексы}
+		\begin{itemize}
+			\item Надстрочные: $x^2$, $x^x$
+		\end{itemize}
+	\end{frame}
+	
+ 	\begin{frame}[fragile]{Источники}
+		\begin{itemize}
+			\item Репозиторий на GitHub:
+				\url{https://github.com/gleb-kun/mpt-course/tree/master/latex}
+    		\item Кнут Д. Все про \TeX
+			\item Львовский С. М. Набор и верстка в системе \LaTeX
+			\item TikZ Manual for Version 2.0
+			\begin{itemize}
+				\item The TikZ and PGF Packages Manual for Version 3.1.10 \url{https://tikz.dev}
+			\end{itemize}
+			\item Воронцов К. В. \LaTeX $2{\varepsilon}$ в примерах
+			\item Коробейников А. И. Презентации \url{https://statmod.ru/wiki/study:fall2018:tex}
+			\item Лебедев А. Ководство
+			\begin{itemize}
+			\item \url{https://www.artlebedev.ru/kovodstvo/sections/97}
+			\end{itemize}
+			\item Мильчин А., Людмила Ч. Справочник издателя и автора
+			\begin{itemize}
+				\item \url{https://www.artlebedev.ru/izdal/spravochnik-izdatelya-i-avtora}
+			\end{itemize}
+		\end{itemize}
+	\end{frame}
+
+    \backmatter
+
+\end{document}
