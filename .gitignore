@@ -4,6 +4,7 @@
 
 # Python
 .ipynb_checkpoints
+.virtual_documents
 
 
 # LaTeX
