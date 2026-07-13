@@ -1,12 +1,17 @@
 # mpt-course
 
-Материалы для курса "Компьютерные технологии математических исследований"
+Materials for courses on computer technologies for mathematical research and the mathematical foundations of computer science.
 
-Репозиторий содержит материалы, задачи, шаблоны и прочую документацию для работы с Python, Maple и LaTeX. Структура проекта организована по типам задач и используемым инструментам.
+The repository contains materials, problems, templates, and other documentation for working with Python, Maple, LaTeX, and Ops tools. The project structure is organized by problem types and tools used.
 
-## Назначение
+Most materials are presented in two languages, see README files:
+- [Russian](README_RU.md),
+- [English](README.md).
 
-- `common/` — материалы общего характера.
-- `latex/` — материалы для практических работ с использованием LaTeX.
-- `maple/` — практикумы и лабораторные по системе Maple.
-- `python/` — практикумы и лабораторные с использованием языка Python и среды JupyterLab.
+## Purpose
+
+- `common/` — general materials.
+- `latex/` — materials for practical work using LaTeX.
+- `maple/` — workshops and labs on the Maple system.
+- `ops/` — materials on tools such as Docker and .git.
+- `python/` — workshops and labs using Python and the JupyterLab environment.
