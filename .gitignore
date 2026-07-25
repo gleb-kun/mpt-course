@@ -20,3 +20,6 @@
 
 latex/**/*.pdf
 !latex/literature/**/*.pdf
+
+# Others
+**.zip
